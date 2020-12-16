@@ -1,15 +1,15 @@
 --- General point: Query syntax could be improved by proper indentation and spacing.
 SELECT
-	   RSEG.EBELN,
-	   RSEG.EBELP,
+       RSEG.EBELN,
+       RSEG.EBELP,
        RSEG.BELNR,
        RSEG.AUGBL AS AUGBL_W,
        LPAD(EKPO.BSART,6,0) AS BSART, ---AS instead of as
        BKPF.GJAHR,
-	   BSEG.BUKRS,
-	   BSEG.BUZEI,
-	   BSEG.BSCHL,
-	   BSEG.SHKZG,
+       BSEG.BUKRS,
+       BSEG.BUZEI,
+       BSEG.BSCHL,
+       BSEG.SHKZG,
        CASE
             WHEN BSEG.SHKZG = 'H' THEN (-1) * BSEG.DMBTR
             ELSE BSEG.DMBTR
